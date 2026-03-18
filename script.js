@@ -32,10 +32,20 @@ const player = document.getElementById('playerAlbum');
 musica.volume = 0.35;
 musica.preload = 'auto';
 
+// Para começar do segundo 8
+musica.addEventListener('loadedmetadata', () => {
+    musica.currentTime = 9;
+});
+// Fim
+
+
 let tocando = false;
 
 function iniciarMusica(){
     player.classList.add('visivel');
+
+    // garante início no segundo 8
+    musica.currentTime = 9;
 
     musica.play().then(() => {
         btnMusica.innerText = '❚❚';
