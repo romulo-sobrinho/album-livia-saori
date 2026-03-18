@@ -34,7 +34,7 @@ musica.preload = 'auto';
 
 // Para começar do segundo 8
 musica.addEventListener('loadedmetadata', () => {
-    musica.currentTime = 9;
+    musica.currentTime = 10;
 });
 // Fim
 
@@ -45,7 +45,7 @@ function iniciarMusica(){
     player.classList.add('visivel');
 
     // garante início no segundo 8
-    musica.currentTime = 9;
+    musica.currentTime = 10;
 
     musica.play().then(() => {
         btnMusica.innerText = '❚❚';
